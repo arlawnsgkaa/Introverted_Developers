@@ -4,6 +4,7 @@ public class Main {
 
         int a = 1;
         int b = 2;
+        int c = 3;
         int i = 90;
         int k = 19;
         int j = 290;
@@ -13,6 +14,7 @@ public class Main {
             System.out.println(k);
             System.out.println(a);
             System.out.println(j);
+            System.out.println(c);
         }
     }
 }
