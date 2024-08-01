@@ -8,7 +8,7 @@ public class Main {
         int i = 90;
         int k = 19;
 
-        for (int j = 0; j < ; j++) {
+        for (int j = 0; j <; j++) {
             System.out.println(i);
             System.out.println(k);
         }
