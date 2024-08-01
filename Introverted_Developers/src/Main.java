@@ -10,7 +10,7 @@ public class Main {
         int j = 290;
         int h = 900;
 
-        for (int j = 0; j <; j++) {
+        for (int j = 0; j < 8; j++) {
             System.out.println(i);
             System.out.println(k);
             System.out.println(a);
