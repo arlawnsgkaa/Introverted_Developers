@@ -8,13 +8,18 @@ public class Main {
         int i = 90;
         int k = 19;
         int j = 290;
+        int h = 900;
 
         for (int j = 0; j <; j++) {
             System.out.println(i);
             System.out.println(k);
             System.out.println(a);
             System.out.println(j);
+
             System.out.println(c);
+
+            System.out.println(h);
+
         }
     }
 }
