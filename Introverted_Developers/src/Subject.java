@@ -9,7 +9,7 @@ public class Subject {
         this.Sub_type = type;
     }
     //getter
-    public int getSub_id(){ return Sub_id;}
+    public int getSub_id(){return Sub_id;}
     public String getSub_name() {return Sub_name;}
     public String getSub_type() {return Sub_type;}
 

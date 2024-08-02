@@ -3,7 +3,9 @@ import java.util.Collections;
 import java.util.Scanner;
 
 public class Main {
+
     public static void main(String[] args) {
+
         Scanner sc = new Scanner(System.in);
         ArrayList<String> Subject_Name =new ArrayList<String>();
         ArrayList<Integer> Subject_ID = new ArrayList<Integer>();
@@ -25,14 +27,21 @@ public class Main {
             switch (num){
                 case 1:
                     sub.Subject(Subject_ID.get(0), Subject_Name.get(0), Subject_Type);
+                    break;
                 case 2:
                     sub.Subject(Subject_ID.get(1), Subject_Name.get(1), Subject_Type);
+                    break;
                 case 3:
                     sub.Subject(Subject_ID.get(2),Subject_Name.get(2),Subject_Type);
+                    break;
                 case 4:
                     sub.Subject(Subject_ID.get(3), Subject_Name.get(3), Subject_Type);
+                    break;
                 case 5:
                     sub.Subject(Subject_ID.get(4), Subject_Name.get(4), Subject_Type);
+                    break;
+                default:
+                    System.out.println("없는 과목입니다");
             }
         } else if (Subject_Type.equals("선택")) {
             Collections.addAll(Subject_Name, Sub_choice);
@@ -49,6 +58,7 @@ public class Main {
                     sub.Subject(Subject_ID.get(3), Subject_Name.get(3), Subject_Type);
             }
         }
+
 
 
     }
