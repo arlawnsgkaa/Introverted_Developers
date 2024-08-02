@@ -15,10 +15,11 @@ public class Student {
 
     //생성자
 
-    public void Student(int studentId, String studentName, String subjectList) {
-        this.studentId = studentId;
-        this.studentName = studentName;
-        this.subjectList = subjectList;
+    public void Student(int Id, String Name, String List) {
+        this.studentId = Id;
+        this.studentName = Name;
+        this.subjectList = List;
+
     }
 
 
