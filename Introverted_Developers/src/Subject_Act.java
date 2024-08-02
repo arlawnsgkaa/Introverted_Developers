@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 
 public class Subject_Act {
+
     public static void Subject_Act() {
         Scanner sc = new Scanner(System.in);
         ArrayList<String> Subject_Name = new ArrayList<String>();
@@ -26,21 +27,21 @@ public class Subject_Act {
             switch (num) {
                 case 1:
                     sub.Subject(Subject_ID.get(0), Subject_Name.get(0), Subject_Type);
-                    break;
+                    return;
                 case 2:
                     sub.Subject(Subject_ID.get(1), Subject_Name.get(1), Subject_Type);
-                    break;
+                    return;
                 case 3:
                     sub.Subject(Subject_ID.get(2), Subject_Name.get(2), Subject_Type);
-                    break;
+                    return;
                 case 4:
                     sub.Subject(Subject_ID.get(3), Subject_Name.get(3), Subject_Type);
-                    break;
+                    return;
                 case 5:
                     sub.Subject(Subject_ID.get(4), Subject_Name.get(4), Subject_Type);
-                    break;
+                    return;
                 default:
-                    System.out.println("없는 과목입니다");
+                    break;
             }
         } else if (Subject_Type.equals("선택")) {
             Collections.addAll(Subject_Name, Sub_choice);
