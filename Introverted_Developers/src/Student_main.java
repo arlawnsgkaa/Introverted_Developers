@@ -1,8 +1,7 @@
 import java.util.ArrayList;
-import java.util.Random;
 import java.util.Scanner;
 
-public class Student_main {
+public class Student_main extends Student {
     Subject sub = new Subject();
     Subject_Act subjectAct = new Subject_Act();
     Scanner sc = new Scanner(System.in);
@@ -26,7 +25,6 @@ public class Student_main {
             if (!Student_Name.equals(null)) {
                 Student_Id.add(id);
                 id = id + 1;
-                System.out.println(Student_Id);
             }
 
             subjectAct.Subject_Act();
@@ -37,7 +35,7 @@ public class Student_main {
 
             System.out.println("End 입력시 등록종료!");
             String a = sc.next();
-            if (a.equals("end")) {
+            if (a.equals("End")) {
                 break;
             }
         }
@@ -49,9 +47,13 @@ public class Student_main {
     }
 
     public void selectST() {
+        System.out.print("수강생 이름을 입력하세요: ");
         String st = sc.next();
         if(st.equals(Student_Name.contains(st))){
-            System.out.println(Student_Name);
+            int STid = getStudentId();
+            String STname = getStudentName();
+            String STsubName = sub.getSub_name();
+            System.out.println(STid + STname + STsubName);
         }
     }
 }
