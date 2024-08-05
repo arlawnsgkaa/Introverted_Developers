@@ -4,12 +4,12 @@ import java.util.Scanner;
 
 public class Subject_Act {
 
-    public void Subject_Act() {
+    public void Subject_Act(Subject sub) {
         Scanner sc = new Scanner(System.in);
         ArrayList<String> Subject_Name_M = new ArrayList<String>();
         ArrayList<String> Subject_Name_C = new ArrayList<String>();
         ArrayList<Integer> Subject_ID = new ArrayList<Integer>();
-        Subject sub = new Subject();
+
 
         String[] Sub_must = {"1. Java", "2. 객체 지향", "3. Spring", "4. JPA", "5. MySQL"};
         String[] Sub_choice = {"1. 디자인 패턴", "2. Spring Security", "3. Redis", "4. MongoDB"};
@@ -74,6 +74,7 @@ public class Subject_Act {
             System.out.println("종료를 원하시면 END를 입력해주세여");
             String s = sc.next();
             if (s.equals("END")) {
+                System.out.println(sub.getSub_name());
                 p = false;
             }
         }

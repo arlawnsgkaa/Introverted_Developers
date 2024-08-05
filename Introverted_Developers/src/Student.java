@@ -34,9 +34,6 @@ public class Student {
         return studentName;
     }
 
-    public String getSubjectList() {
-        return subjectList;
-
-    }
+    public String getSubjectList() {return subjectList;}
 
 }

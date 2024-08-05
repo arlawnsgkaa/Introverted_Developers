@@ -8,12 +8,10 @@ public class Student_main {
     Student stud = new Student();
     ArrayList<Integer> Student_Id = new ArrayList<Integer>();
     ArrayList<String> Student_Name = new ArrayList<String>();
-
+    private static int id = 1;
     public void Std() {
         // Student 객체 생성
         Student std = new Student();
-        int id = 1;
-//
 
         //입력 값 저장
 
@@ -28,8 +26,9 @@ public class Student_main {
                 id = id + 1;
             }
 
-            subjectAct.Subject_Act();
+            subjectAct.Subject_Act(sub);
             String subject = sub.getSub_name();
+            System.out.println(subject);
             System.out.println(Student_Id);
             stud.Student(Student_Id.get(id - 2), Student_Name.get(id - 2), subject);
 
