@@ -6,6 +6,7 @@ public class Subject_Act {
 
     public void Subject_Act(Subject sub) {
         Scanner sc = new Scanner(System.in);
+
         ArrayList<String> Subject_Name_M = new ArrayList<String>();
         ArrayList<String> Subject_Name_C = new ArrayList<String>();
         ArrayList<Integer> Subject_ID = new ArrayList<Integer>();

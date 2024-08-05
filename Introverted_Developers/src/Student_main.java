@@ -46,13 +46,19 @@ public class Student_main {
     }
 
     public void selectST() {
+        ArrayList<String> subjectList = new ArrayList<String>();
         System.out.print("수강생 이름을 입력하세요: ");
         String st = sc.next();
         if(Student_Name.contains(st)){
             int STid = stud.getStudentId();
             String STname = stud.getStudentName();
-            String STsubName = sub.getSub_name();
-            System.out.println(STid + STname + STsubName);
+
+            subjectList.add(sub.getSub_name());
+
+            for (String arr : subjectList) {
+                System.out.println(arr);
+            }
+            System.out.println(STid + STname + subjectList);
         }
     }
 }

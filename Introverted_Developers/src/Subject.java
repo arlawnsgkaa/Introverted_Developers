@@ -7,8 +7,6 @@ public class Subject {
         this.Sub_id = id;
         this.Sub_name = name;
         this.Sub_type = type;
-        System.out.println(name);
-        System.out.println(Sub_name);
     }
     //getter
     public int getSub_id(){return Sub_id;}
