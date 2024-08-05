@@ -6,8 +6,10 @@ public class Student_main {
     Subject_Act subjectAct = new Subject_Act();
     Scanner sc = new Scanner(System.in);
     Student stud = new Student();
+
     ArrayList<Integer> Student_Id = new ArrayList<Integer>();
     ArrayList<String> Student_Name = new ArrayList<String>();
+    ArrayList<String> Subject_Name = new ArrayList<String>();
     private static int id = 1;
     public void Std() {
         // Student 객체 생성
@@ -27,10 +29,11 @@ public class Student_main {
             }
 
             subjectAct.Subject_Act(sub);
-            String subject = sub.getSub_name();
-            System.out.println(subject);
-            System.out.println(Student_Id);
-            stud.Student(Student_Id.get(id - 2), Student_Name.get(id - 2), subject);
+            subjectAct.Subject_Name();
+
+            System.out.println(Subject_Name);
+            stud.Student(Student_Id.get(id - 2), Student_Name.get(id - 2), null);
+
 
             System.out.println("End 입력시 등록종료!");
             String a = sc.next();
@@ -46,13 +49,14 @@ public class Student_main {
     }
 
     public void selectST() {
+
         System.out.print("수강생 이름을 입력하세요: ");
         String st = sc.next();
         if(Student_Name.contains(st)){
             int STid = stud.getStudentId();
             String STname = stud.getStudentName();
-            String STsubName = sub.getSub_name();
-            System.out.println(STid + STname + STsubName);
+
+            System.out.println(STid + STname + Subject_Name);
         }
     }
 }
