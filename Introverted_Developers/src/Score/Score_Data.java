@@ -5,12 +5,12 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class Data {
+public class Score_Data {
     public void score(String a, int b) {
-       List<Map<String, Integer>> listMapInsert  = new ArrayList();
+        List<Map<String, Integer>> Score_list = new ArrayList();
         Map<String, Integer> map = new HashMap<String, Integer>();
-        map.put(a, b);
-        listMapInsert.add(map);
+        map.put(a,b);
+        Score_list.add(map);
+        System.out.println(Score_list);
     }
-
 }

@@ -10,6 +10,8 @@ public class Main {
     static Round round = new Round();
     static Subject_Act subjectAct = new Subject_Act();
     static Score soc = new Score();
+
+
     public static void main(String[] args) {
         try {
             displayMainView();
