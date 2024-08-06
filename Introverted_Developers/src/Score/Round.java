@@ -26,27 +26,5 @@ public class Round {
                 break;
             }
         }
-
-
-    /*    for (int i = 1; i <= 10; i++) {
-            System.out.print("필수과목 점수 입력: ");
-            int score = sc.nextInt();
-            ScoreList.add(j + "회 차" + " " + getrsRank(score));
-        }
-
-
-
-        for (int i = 1; i <= 10; i++) {
-            System.out.print("선택과목 점수 입력: ");
-            int score = sc.nextInt();
-            ScoreList.add(j + "회 차" + " " + getesRank(score));
-        }
-
-        for(String arr : ScoreList) {
-            System.out.println(arr);
-        }
-
-     */
     }
-
 }
