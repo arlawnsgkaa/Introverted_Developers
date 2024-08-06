@@ -4,7 +4,8 @@ import java.util.*;
 
 public class Subject_Act {
     public int i;
-    Set<Integer> uniques = new HashSet<>();
+    Set<Integer> uniques_must = new HashSet<>();
+    Set<Integer> uniques_choice = new HashSet<>();
     ArrayList<String> Subject_Name_M = new ArrayList<String>();
     ArrayList<String> Subject_Name_C = new ArrayList<String>();
     ArrayList<Integer> Subject_ID = new ArrayList<Integer>();
@@ -29,7 +30,7 @@ public class Subject_Act {
                     num = sc.nextInt();
                     if (num < 1 || num > 5) {
                         System.out.println("없는 과목입니다. 다시 선택하세요");
-                    } else if (uniques.add(num)) {
+                    } else if (uniques_must.add(num)) {
                         validInput = true;
                         switch (num) {
                             case 1:
@@ -69,7 +70,7 @@ public class Subject_Act {
                     num = sc.nextInt();
                     if (num < 1 || num > 5) {
                         System.out.println("없는 과목입니다. 다시 선택하세요");
-                    } else if (uniques.add(num)) {
+                    } else if (uniques_choice.add(num)) {
                         validInput = true;
                         switch (num) {
                             case 1:
@@ -94,7 +95,7 @@ public class Subject_Act {
                 }
             }
             for (int q = 0; q < 2; q++) {
-                sub.Subject(Subject_ID.get(q), Subject_Name_M.get(q), Subject_Type);
+                sub.Subject(Subject_ID.get(q), Subject_Name_M.get(q), Subject_Type_S);
             }
             System.out.println("과목 선택이 완료 되었습니다");
             p = false;
