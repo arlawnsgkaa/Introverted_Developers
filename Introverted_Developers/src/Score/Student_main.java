@@ -9,13 +9,10 @@ public class Student_main {
     Subject sub = new Subject();
     Subject_Act subjectAct = new Subject_Act();
     Scanner sc = new Scanner(System.in);
-<<<<<<< HEAD
+
     Student stud = new Student();
     ArrayList<Integer> Student_Id = new ArrayList<Integer>();
-=======
 
-    ArrayList<Integer> Student_Id = new ArrayList<>();
->>>>>>> 433496d980f0a12699e38cbad40866053c357aa1
     ArrayList<String> Student_Name = new ArrayList<>();
     ArrayList<ArrayList<String>> Subject_Name = new ArrayList<>();
     ArrayList<StudentInfo> students = new ArrayList<>();
@@ -66,7 +63,7 @@ public class Student_main {
         System.out.print("수강생 이름을 입력하세요: ");
 
         String st = sc.next();
-<<<<<<< HEAD
+
         if(Student_Name.contains(st)){
             for (StudentInfo studentInfo : students) {
                 if (studentInfo.getStudentName().equals(st)) {
@@ -84,15 +81,4 @@ public class Student_main {
 
 }
 
-=======
-        if (Student_Name.contains(st)) {
-            System.out.println("학번 : " + STid);
-            System.out.println("이름 : " + st);
-            System.out.println("수강 과목(필수)  : " + SBname.get(0));
-            System.out.println("수강 과목(선택)  : " + SBname.get(1));
-        } else {
-            System.out.println("이름가 없습니다.");
-        }
-    }
-}
->>>>>>> 433496d980f0a12699e38cbad40866053c357aa1
+
