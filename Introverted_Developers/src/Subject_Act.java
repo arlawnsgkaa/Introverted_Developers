@@ -90,4 +90,3 @@ public class Subject_Act {
         }// 전체적인 while 문
     }
 } // 생성자
-

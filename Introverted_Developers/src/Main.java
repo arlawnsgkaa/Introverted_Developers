@@ -13,6 +13,7 @@ public class Main {
     static Score soc = new Score();
     static Data data = new Data();
 
+
     public static void main(String[] args) {
         try {
             displayMainView();
@@ -51,7 +52,7 @@ public class Main {
     }
 
 
-//    학생 관리 화면
+    //    학생 관리 화면
     private static void displayStudentView() {
         boolean flag = true;
         while (flag) {
@@ -75,7 +76,7 @@ public class Main {
         }
     }
 
-//    점수 관리 화면
+    //    점수 관리 화면
     private static void displayScoreView() {
         boolean flag = true;
         while (flag) {
@@ -90,7 +91,7 @@ public class Main {
 
             switch (input) {
                 case 1 -> createScore(); // 수강생의 과목별 시험 회차 및 점수 등록
-//                case 2 -> updateRoundScoreBySubject(); // 수강생의 과목별 회차 점수 수정
+                case 2 -> updateRoundScoreBySubject(); // 수강생의 과목별 회차 점수 수정
 //                case 3 -> inquireRoundGradeBySubject(); // 수강생의 특정 과목 회차별 등급 조회
                 case 4 -> flag = false; // 메인 화면 이동
                 default -> {
@@ -102,18 +103,35 @@ public class Main {
     }
 
     public static void createScore(){
-        System.out.println("==================================");
-        System.out.println("수강생의 과목별 시험 회차 및 점수 등록");
-        System.out.println("1. 회차 및 점수 등록");
-        System.out.println("2. ");
-        System.out.println("3. 메인 화면 이동");
-        System.out.print("관리 항목을 선택하세요...");
-        int input = sc.nextInt();
-        switch (input){
-            case 1 -> Round.RoundInput(data);
-//            case 2 -> soc.Score_A(data);
+        boolean flag = true;
+        while (flag) {
+            System.out.println("==================================");
+            System.out.println("수강생의 과목별 시험 회차 및 점수 등록");
+            System.out.println("1. 회차 및 점수 등록");
+            System.out.println("2. 메인 화면 이동");
+            System.out.print("관리 항목을 선택하세요...");
+            int input = sc.nextInt();
+            switch (input) {
+                case 1 -> Round.RoundInput(data);
+                case 2 -> flag = false;
+            }
+        }
+    }
+    public static void updateRoundScoreBySubject(){
+        boolean flag = true;
+        while (flag) {
+            System.out.println("==================================");
+            System.out.println("수강생의 과목별 회차 점수 수정");
+            System.out.println("1. 회차 및 과목 선택");
+            System.out.println("2. 점수 수정");
+            System.out.println("3. 메인 화면 이동");
+            System.out.print("관리 항목을 선택하세요...");
+            int input = sc.nextInt();
+            switch (input) {
+                case 1 -> round.RoundInput(data);
+                case 2 -> soc.Score_A();
+            }
         }
     }
 }
-
 
