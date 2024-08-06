@@ -103,29 +103,34 @@ public class Main {
     }
 
     public static void createScore(){
-        System.out.println("==================================");
-        System.out.println("수강생의 과목별 시험 회차 및 점수 등록");
-        System.out.println("1. 회차 및 점수 등록");
-        System.out.println("2. ");
-        System.out.println("3. 메인 화면 이동");
-        System.out.print("관리 항목을 선택하세요...");
-        int input = sc.nextInt();
-        switch (input){
-            case 1 -> Round.RoundInput(data);
-//            case 2 -> soc.Score_A(data);
+        boolean flag = true;
+        while (flag) {
+            System.out.println("==================================");
+            System.out.println("수강생의 과목별 시험 회차 및 점수 등록");
+            System.out.println("1. 회차 및 점수 등록");
+            System.out.println("2. 메인 화면 이동");
+            System.out.print("관리 항목을 선택하세요...");
+            int input = sc.nextInt();
+            switch (input) {
+                case 1 -> Round.RoundInput(data);
+                case 2 -> flag = false;
+            }
         }
     }
     public static void updateRoundScoreBySubject(){
-        System.out.println("==================================");
-        System.out.println("수강생의 과목별 시험 회차 및 점수 등록");
-        System.out.println("1. 회차 및 과목 선택");
-        System.out.println("2. 점수 수정");
-        System.out.println("3. 메인 화면 이동");
-        System.out.print("관리 항목을 선택하세요...");
-        int input = sc.nextInt();
-        switch (input){
-            case 1 -> round.RoundInput();
-            case 2 -> soc.Score_A();
+        boolean flag = true;
+        while (flag) {
+            System.out.println("==================================");
+            System.out.println("수강생의 과목별 회차 점수 수정");
+            System.out.println("1. 회차 및 과목 선택");
+            System.out.println("2. 점수 수정");
+            System.out.println("3. 메인 화면 이동");
+            System.out.print("관리 항목을 선택하세요...");
+            int input = sc.nextInt();
+            switch (input) {
+                case 1 -> round.RoundInput(data);
+                case 2 -> soc.Score_A();
+            }
         }
     }
 }

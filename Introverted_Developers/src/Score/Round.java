@@ -1,24 +1,17 @@
 package Score;
 
-import java.util.Scanner;
+
+ import java.util.Scanner;
+
+
 
 public class Round {
 
-    static public Round_Data RD = new Round_Data();
 
-    public static void RoundInput() {
 
 
     public static void RoundInput(Data data) {
         Scanner sc = new Scanner(System.in);
-
-        System.out.println("회차를 입력해 주세요");
-        String s = sc.next();
-        System.out.println("몇 회차 인지 입력해 주세요");
-        int i = sc.nextInt();
-        RD.round(s, i);
-
-
 
         while (true) {
             if(data.map.size() < 10) {
@@ -62,5 +55,5 @@ public class Round {
      */
     }
 
-    }
 }
+
