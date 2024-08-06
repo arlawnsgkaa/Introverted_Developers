@@ -1,8 +1,8 @@
 package Score;
 
-import java.util.ArrayList;
 import java.util.Scanner;
 
+<<<<<<< HEAD
 public class Score {
 
     public Score_Data SD = new Score_Data();
@@ -16,8 +16,23 @@ public class Score {
         SD.score(j, i);
     }
     public void Score_B(){
+=======
+public class Score{
 
-    }
+
+>>>>>>> cff33d91ce25a738b1b3dcc340ba81dde14ef1d6
+
+//    public void Score_A(){
+//        Data data = new Data();
+//
+//        Scanner sc = new Scanner(System.in);
+//        System.out.println("회차를 입력해 주세요");
+//        String j = sc.next();
+//        System.out.println("점수를 기입해주세요");
+//        int i = sc.nextInt();
+//        data.score(j, i);
+//    }
+
 
 
 }

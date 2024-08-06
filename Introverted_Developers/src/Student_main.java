@@ -49,17 +49,31 @@ public class Student_main {
     }
 
     public void selectST() {
+<<<<<<< HEAD
 
+=======
+        ArrayList<String> subjectList = new ArrayList<String>();
+>>>>>>> cff33d91ce25a738b1b3dcc340ba81dde14ef1d6
         System.out.print("수강생 이름을 입력하세요: ");
         String st = sc.next();
         if(Student_Name.contains(st)){
             int STid = stud.getStudentId();
             String STname = stud.getStudentName();
+<<<<<<< HEAD
             ArrayList<ArrayList<String>> SBname = stud.getSubjectList();
             System.out.println("학번 : "+STid);
             System.out.println("이름 : "+STname);
             System.out.println("수강 과목(필수)  : "+SBname.get(0));
             System.out.println("수강 과목(선택)  : "+SBname.get(1));
+=======
+
+            subjectList.add(sub.getSub_name());
+
+            for (String arr : subjectList) {
+                System.out.println(arr);
+            }
+            System.out.println(STid + STname + subjectList);
+>>>>>>> cff33d91ce25a738b1b3dcc340ba81dde14ef1d6
         }
     }
 }
