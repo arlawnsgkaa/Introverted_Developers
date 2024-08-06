@@ -1,3 +1,5 @@
+package Score;
+
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -5,15 +7,15 @@ public class Student_main {
     Subject sub = new Subject();
     Subject_Act subjectAct = new Subject_Act();
     Scanner sc = new Scanner(System.in);
-    Student stud = new Student();
+
 
     ArrayList<Integer> Student_Id = new ArrayList<Integer>();
     ArrayList<String> Student_Name = new ArrayList<>();
     ArrayList<ArrayList<String>> Subject_Name = new ArrayList<>();
 
     private static int id = 1;
-    public void Std() {
-        // Student 객체 생성
+    public void Std(Student stud) {
+        // Score.Student 객체 생성
         Student std = new Student();
 
         //입력 값 저장
@@ -48,7 +50,7 @@ public class Student_main {
 
     }
 
-    public void selectST() {
+    public void selectST(Student stud) {
 
 
         ArrayList<String> subjectList = new ArrayList<String>();
