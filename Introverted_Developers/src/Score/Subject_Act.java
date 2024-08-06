@@ -5,14 +5,12 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 public class Subject_Act {
-
     public int i;
+
     ArrayList<Integer> Subject_ID = new ArrayList<Integer>();
-    final String[] Sub_must = {"1. Java", "2. 객체지향", "3. Spring", "4. JPA", "5. MySQL"};
+    final String[] Sub_must = {"1. Java", "2. 객체 지향", "3. Spring", "4. JPA", "5. MySQL"};
     final String[] Sub_choice = {"1. 디자인 패턴", "2. Spring Security", "3. Redis", "4. MongoDB","5. 선택안함"};
-
     public void Subject_Act(Student student) {
-
 
         Scanner sc = new Scanner(System.in);
         int num = 0;
@@ -54,7 +52,14 @@ public class Subject_Act {
                         break;
                 }
             }
+            for(int k=0; k<3; k++){
+
+            }
+
+            // if 문
             System.out.println("선택 과목");
+            String Subject_Type_S = "선택";
+
             System.out.println("선택을 안하려면 5번을 선택해주세요");
             for (i = 0; i < 2; i++) {
                 System.out.println(Arrays.toString(Sub_choice));
@@ -81,7 +86,9 @@ public class Subject_Act {
                         break;
                 }
             }
-
+//            for(int q=0; q<2; q++){
+//                .(Subject_ID.get(q), Subject_Name_M.get(q), Subject_Type);
+//            }
             student.getSubjectList().add(Subject_Name_M);
             student.getSubjectList().add(Subject_Name_C);
 
@@ -91,4 +98,3 @@ public class Subject_Act {
         }// 전체적인 while 문
     }
 } // 생성자
-
