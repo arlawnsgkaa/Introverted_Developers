@@ -1,4 +1,4 @@
-import java.util.ArrayList;
+package Score;
 
 public class Subject {
     private int Sub_id;

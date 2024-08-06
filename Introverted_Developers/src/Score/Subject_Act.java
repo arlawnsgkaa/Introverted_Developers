@@ -1,9 +1,11 @@
+package Score;
+
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Collections;
 import java.util.Scanner;
 
 public class Subject_Act {
+
     public int i;
     ArrayList<String> Subject_Name_M = new ArrayList<String>();
     ArrayList<String> Subject_Name_C = new ArrayList<String>();
@@ -90,3 +92,4 @@ public class Subject_Act {
         }// 전체적인 while 문
     }
 } // 생성자
+

@@ -1,5 +1,4 @@
 package Score;
-
 import java.util.*;
 
 public class Data {
@@ -9,13 +8,11 @@ public class Data {
     public void score(String a, int b) {
         map.put(a, b);
 
-        if(listMapInsert.size() == 0){
-        listMapInsert.add(map);
+        if (listMapInsert.size() == 0) {
+            listMapInsert.add(map);
         }
 
-        System.out.println("List: "+listMapInsert);
-        map.forEach((k, v) -> System.out.println("MAP: " + k + " " + v + "점수"));
+        System.out.println("List: " + listMapInsert);
+        map.forEach((k, v) -> System.out.println("회차: " + k + " " + v + "점수"));
     }
-
-
 }

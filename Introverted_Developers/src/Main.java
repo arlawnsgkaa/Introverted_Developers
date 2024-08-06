@@ -1,6 +1,9 @@
 import Score.Round;
 import Score.Score;
 import Score.Data;
+import Score.Student;
+import Score.Subject_Act;
+import Score.Student_main;
 
 import java.util.Scanner;
 
@@ -15,11 +18,12 @@ public class Main {
 
 
     public static void main(String[] args) {
-        try {
+        displayMainView();
+        /*try {
             displayMainView();
         } catch (Exception e) {
             System.out.println("\n오류 발생!\n프로그램을 종료합니다.");
-        }
+        }*/
     }
 
     public static Subject_Act getSubjectAct() {
@@ -27,12 +31,12 @@ public class Main {
     }
 
     //메인 화면
-    private static void displayMainView() throws InterruptedException {
+    private static void displayMainView() /*throws InterruptedException*/ {
         boolean flag = true;
         while (flag) {
             System.out.println("\n==================================");
             System.out.println("내일배움캠프 수강생 관리 프로그램 실행 중...");
-            System.out.println("1. 수강생 관리");
+           System.out.println("1. 수강생 관리");
             System.out.println("2. 점수 관리");
             System.out.println("3. 프로그램 종료");
             System.out.print("관리 항목을 선택하세요...");
@@ -44,7 +48,7 @@ public class Main {
                 case 3 -> flag = false; // 프로그램 종료
                 default -> {
                     System.out.println("잘못된 입력입니다.\n되돌아갑니다!");
-                    Thread.sleep(2000);
+                   // Thread.sleep(2000);
                 }
             }
         }
@@ -65,8 +69,8 @@ public class Main {
             int input = sc.nextInt();
 
             switch (input) {
-                case 1 -> student_main.Std(); // 수강생 등록
-                case 2 -> student_main.selectST(); // 수강생 목록 조회
+                case 1 -> student_main.Std(student); // 수강생 등록
+                case 2 -> student_main.selectST(student); // 수강생 목록 조회
                 case 3 -> flag = false; // 메인 화면 이동
                 default -> {
                     System.out.println("잘못된 입력입니다.\n메인 화면 이동...");
@@ -112,7 +116,7 @@ public class Main {
             System.out.print("관리 항목을 선택하세요...");
             int input = sc.nextInt();
             switch (input) {
-                case 1 -> Round.RoundInput(data);
+                case 1 -> Round.RoundInput(data,student);
                 case 2 -> flag = false;
             }
         }
@@ -128,7 +132,7 @@ public class Main {
             System.out.print("관리 항목을 선택하세요...");
             int input = sc.nextInt();
             switch (input) {
-                case 1 -> round.RoundInput(data);
+                case 1 -> round.RoundInput(data,student);
                 case 2 -> soc.Score_A();
             }
         }
