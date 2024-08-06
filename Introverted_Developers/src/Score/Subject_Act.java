@@ -9,7 +9,7 @@ public class Subject_Act {
     ArrayList<String> Subject_Name_M = new ArrayList<String>();
     ArrayList<String> Subject_Name_C = new ArrayList<String>();
     ArrayList<Integer> Subject_ID = new ArrayList<Integer>();
-    final String[] Sub_must = {"1. Java", "2. 객체 지향", "3. Spring", "4. JPA", "5. MySQL"};
+    final String[] Sub_must = {"1. Java", "2. 객체지향", "3. Spring", "4. JPA", "5. MySQL"};
     final String[] Sub_choice = {"1. 디자인 패턴", "2. Spring Security", "3. Redis", "4. MongoDB","5. 선택안함"};
     public void Subject_Act(Subject sub) {
         Scanner sc = new Scanner(System.in);

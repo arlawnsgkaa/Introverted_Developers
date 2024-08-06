@@ -1,19 +1,22 @@
 package Score;
 
 import java.util.ArrayList;
+import java.util.List;
+import java.util.Objects;
 import java.util.Scanner;
 
 public class Student_main {
     Subject sub = new Subject();
     Subject_Act subjectAct = new Subject_Act();
     Scanner sc = new Scanner(System.in);
-
-
+    Student stud = new Student();
     ArrayList<Integer> Student_Id = new ArrayList<Integer>();
     ArrayList<String> Student_Name = new ArrayList<>();
     ArrayList<ArrayList<String>> Subject_Name = new ArrayList<>();
+    ArrayList<StudentInfo> students = new ArrayList<>();
 
     private static int id = 1;
+
     public void Std(Student stud) {
         // Score.Student 객체 생성
         Student std = new Student();
@@ -35,6 +38,8 @@ public class Student_main {
             Subject_Name.add(subjectAct.Subject_Name_M);
             Subject_Name.add(subjectAct.Subject_Name_C);
             stud.Student(Student_Id.get(id - 2), Student_Name.get(id - 2), Subject_Name);
+            StudentInfo studentInfo = new StudentInfo(id-1, name, Subject_Name);
+            students.add(studentInfo);
 
 
             System.out.println("End 입력시 등록종료!");
@@ -58,17 +63,19 @@ public class Student_main {
         System.out.print("수강생 이름을 입력하세요: ");
         String st = sc.next();
         if(Student_Name.contains(st)){
-            int STid = stud.getStudentId();
-            String STname = stud.getStudentName();
-
-            ArrayList<ArrayList<String>> SBname = stud.getSubjectList();
-            System.out.println("학번 : "+STid);
-            System.out.println("이름 : "+STname);
-            System.out.println("수강 과목(필수)  : "+SBname.get(0));
-            System.out.println("수강 과목(선택)  : "+SBname.get(1));
-
+            for (StudentInfo studentInfo : students) {
+                if (studentInfo.getStudentName().equals(st)) {
+                    System.out.println("학번 : " + studentInfo.getStudentId());
+                    System.out.println("이름 : " + studentInfo.getStudentName());
+                    System.out.println("수강 과목(필수)  : " + studentInfo.getSubjectList().get(0));
+                    System.out.println("수강 과목(선택)  : " + studentInfo.getSubjectList().get(1));
+                    return;
+                }
+            }
+            System.out.println("학생을 찾을 수 없습니다.");
 
         }
     }
+
 }
 
