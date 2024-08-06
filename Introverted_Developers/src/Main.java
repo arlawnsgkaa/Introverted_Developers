@@ -19,12 +19,12 @@ public class Main {
 
 
     public static void main(String[] args) {
-        displayMainView();
-        /*try {
+//        displayMainView();
+        try {
             displayMainView();
         } catch (Exception e) {
             System.out.println("\n오류 발생!\n프로그램을 종료합니다.");
-        }*/
+        }
     }
 
     public static Subject_Act getSubjectAct() {
@@ -32,7 +32,7 @@ public class Main {
     }
 
     //메인 화면
-    private static void displayMainView() /*throws InterruptedException*/ {
+    private static void displayMainView() throws InterruptedException {
         boolean flag = true;
         while (flag) {
             System.out.println("\n==================================");
