@@ -9,8 +9,13 @@ public class Student_main {
     Subject sub = new Subject();
     Subject_Act subjectAct = new Subject_Act();
     Scanner sc = new Scanner(System.in);
+<<<<<<< HEAD
     Student stud = new Student();
     ArrayList<Integer> Student_Id = new ArrayList<Integer>();
+=======
+
+    ArrayList<Integer> Student_Id = new ArrayList<>();
+>>>>>>> 433496d980f0a12699e38cbad40866053c357aa1
     ArrayList<String> Student_Name = new ArrayList<>();
     ArrayList<ArrayList<String>> Subject_Name = new ArrayList<>();
     ArrayList<StudentInfo> students = new ArrayList<>();
@@ -18,16 +23,12 @@ public class Student_main {
     private static int id = 1;
 
     public void Std(Student stud) {
-        // Score.Student 객체 생성
-        Student std = new Student();
-
-        //입력 값 저장
-
 
         while (true) {
             System.out.println("수강생 이름 작성: ");
             String name = sc.next();
             Student_Name.add(name);
+            System.out.println("조회 하기전" + Student_Name);
 
             if (!Student_Name.equals(null)) {
                 Student_Id.add(id);
@@ -37,6 +38,7 @@ public class Student_main {
             subjectAct.Subject_Act(sub);
             Subject_Name.add(subjectAct.Subject_Name_M);
             Subject_Name.add(subjectAct.Subject_Name_C);
+
             stud.Student(Student_Id.get(id - 2), Student_Name.get(id - 2), Subject_Name);
             StudentInfo studentInfo = new StudentInfo(id-1, name, Subject_Name);
             students.add(studentInfo);
@@ -56,12 +58,15 @@ public class Student_main {
     }
 
     public void selectST(Student stud) {
+        int STid = stud.getStudentId();
+        ArrayList<ArrayList<String>> SBname = stud.getSubjectList();
 
-
-        ArrayList<String> subjectList = new ArrayList<String>();
+        System.out.println("조회" + Student_Name);
 
         System.out.print("수강생 이름을 입력하세요: ");
+
         String st = sc.next();
+<<<<<<< HEAD
         if(Student_Name.contains(st)){
             for (StudentInfo studentInfo : students) {
                 if (studentInfo.getStudentName().equals(st)) {
@@ -79,3 +84,15 @@ public class Student_main {
 
 }
 
+=======
+        if (Student_Name.contains(st)) {
+            System.out.println("학번 : " + STid);
+            System.out.println("이름 : " + st);
+            System.out.println("수강 과목(필수)  : " + SBname.get(0));
+            System.out.println("수강 과목(선택)  : " + SBname.get(1));
+        } else {
+            System.out.println("이름가 없습니다.");
+        }
+    }
+}
+>>>>>>> 433496d980f0a12699e38cbad40866053c357aa1

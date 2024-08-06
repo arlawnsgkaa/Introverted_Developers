@@ -1,11 +1,10 @@
 package Score;
 
+import java.awt.*;
 import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Student {
-    static Scanner sc = new Scanner(System.in);
-
 
     private int studentId; // 수강생 고유 번호
     private String studentName; // 수강생 이름
@@ -20,18 +19,20 @@ public class Student {
 
     }
 
-
-
     // 메서드
 
     public int getStudentId() {
+
         return studentId;
     }
 
     public String getStudentName() {
+
         return studentName;
     }
 
-    public ArrayList<ArrayList<String>> getSubjectList() {return subjectList;}
+    public ArrayList<ArrayList<String>> getSubjectList() {
+        return subjectList;
+    }
 
 }

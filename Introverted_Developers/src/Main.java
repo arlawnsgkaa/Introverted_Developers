@@ -1,7 +1,6 @@
 import Score.Round;
 import Score.Score;
 import Score.Data;
-import Score.Subject;
 import Score.Student;
 import Score.Subject_Act;
 import Score.Student_main;
@@ -37,7 +36,7 @@ public class Main {
         while (flag) {
             System.out.println("\n==================================");
             System.out.println("내일배움캠프 수강생 관리 프로그램 실행 중...");
-           System.out.println("1. 수강생 관리");
+            System.out.println("1. 수강생 관리");
             System.out.println("2. 점수 관리");
             System.out.println("3. 프로그램 종료");
             System.out.print("관리 항목을 선택하세요...");
@@ -49,7 +48,7 @@ public class Main {
                 case 3 -> flag = false; // 프로그램 종료
                 default -> {
                     System.out.println("잘못된 입력입니다.\n되돌아갑니다!");
-                   // Thread.sleep(2000);
+                    // Thread.sleep(2000);
                 }
             }
         }
@@ -57,7 +56,7 @@ public class Main {
     }
 
 
-//    학생 관리 화면
+    //    학생 관리 화면
     private static void displayStudentView() {
         boolean flag = true;
         while (flag) {
@@ -81,7 +80,7 @@ public class Main {
         }
     }
 
-//    점수 관리 화면
+    //    점수 관리 화면
     private static void displayScoreView() {
         boolean flag = true;
         while (flag) {
@@ -107,7 +106,7 @@ public class Main {
         }
     }
 
-    public static void createScore(){
+    public static void createScore() {
         boolean flag = true;
         while (flag) {
             System.out.println("==================================");
@@ -117,12 +116,13 @@ public class Main {
             System.out.print("관리 항목을 선택하세요...");
             int input = sc.nextInt();
             switch (input) {
-                case 1 -> Round.RoundInput(data,student);
+                case 1 -> Round.RoundInput(data, student);
                 case 2 -> flag = false;
             }
         }
     }
-    public static void updateRoundScoreBySubject(){
+
+    public static void updateRoundScoreBySubject() {
         boolean flag = true;
         while (flag) {
             System.out.println("==================================");
@@ -133,11 +133,10 @@ public class Main {
             System.out.print("관리 항목을 선택하세요...");
             int input = sc.nextInt();
             switch (input) {
-                case 1 -> round.RoundInput(data,student);
+                case 1 -> round.RoundInput(data, student);
                 case 2 -> soc.Score_A();
             }
         }
     }
 }
-
 
