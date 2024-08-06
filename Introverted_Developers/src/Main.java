@@ -49,12 +49,12 @@ public class Main {
                 case 3 -> flag = false; // 프로그램 종료
                 default -> {
                     System.out.println("잘못된 입력입니다.\n되돌아갑니다!");
-<<<<<<< HEAD
-                    Thread.sleep(2000);
+
+//                    Thread.sleep(2000);
                     //  지정된 시간(밀리초) 동안 현재 스레드를 일시 중단
-=======
+
                    // Thread.sleep(2000);
->>>>>>> 74c2ca346d7055eee2a3445f9e97143b2e0867cd
+
                 }
             }
         }
