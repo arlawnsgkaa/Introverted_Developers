@@ -12,17 +12,6 @@ public class Subject_Act {
     final String[] Sub_choice = {"1. 디자인 패턴", "2. Spring Security", "3. Redis", "4. MongoDB","5. 선택안함"};
     public void Subject_Act(Subject sub) {
         Scanner sc = new Scanner(System.in);
-<<<<<<< HEAD
-=======
-
-        ArrayList<String> Subject_Name_M = new ArrayList<String>();
-        ArrayList<String> Subject_Name_C = new ArrayList<String>();
-        ArrayList<Integer> Subject_ID = new ArrayList<Integer>();
-
-
-        String[] Sub_must = {"1. Java", "2. 객체 지향", "3. Spring", "4. JPA", "5. MySQL"};
-        String[] Sub_choice = {"1. 디자인 패턴", "2. Spring Security", "3. Redis", "4. MongoDB"};
->>>>>>> cff33d91ce25a738b1b3dcc340ba81dde14ef1d6
         int num = 0;
         for (int i = 101; i <= 105; i++) {
             Subject_ID.add(i);

@@ -2,11 +2,12 @@ package Score;
 
 import java.util.Scanner;
 
-<<<<<<< HEAD
+
 public class Score {
 
     public Score_Data SD = new Score_Data();
-    public  void Score_A(){
+
+    public void Score_A() {
 
         Scanner sc = new Scanner(System.in);
         System.out.println("필수 과목과 선택 과목을 선택해주세요");
@@ -15,12 +16,11 @@ public class Score {
         int i = sc.nextInt();
         SD.score(j, i);
     }
-    public void Score_B(){
-=======
-public class Score{
+
+    public void Score_B() {
 
 
->>>>>>> cff33d91ce25a738b1b3dcc340ba81dde14ef1d6
+
 
 //    public void Score_A(){
 //        Data data = new Data();
@@ -34,5 +34,5 @@ public class Score{
 //    }
 
 
-
-}
+        }
+    }

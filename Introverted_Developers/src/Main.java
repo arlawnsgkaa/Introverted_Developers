@@ -11,11 +11,8 @@ public class Main {
     static Round round = new Round();
     static Subject_Act subjectAct = new Subject_Act();
     static Score soc = new Score();
-<<<<<<< HEAD
-
-=======
     static Data data = new Data();
->>>>>>> cff33d91ce25a738b1b3dcc340ba81dde14ef1d6
+
 
     public static void main(String[] args) {
         try {

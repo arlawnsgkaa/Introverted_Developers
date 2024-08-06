@@ -5,9 +5,7 @@ import java.util.Scanner;
 
 public class Student {
     static Scanner sc = new Scanner(System.in);
-     static List<Integer>  subject_score = new ArrayList<Integer>();
-    static List<Integer> student_number = new ArrayList<Integer>();
-    // 수강생관리
+
 
     private int studentId; // 수강생 고유 번호
     private String studentName; // 수강생 이름
