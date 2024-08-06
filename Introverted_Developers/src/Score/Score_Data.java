@@ -13,4 +13,4 @@ public class Score_Data {
         Score_list.add(map);
         System.out.println(Score_list);
     }
-}
+

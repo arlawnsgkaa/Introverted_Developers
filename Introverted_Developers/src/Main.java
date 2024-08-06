@@ -89,7 +89,7 @@ public class Main {
 
             switch (input) {
                 case 1 -> createScore(); // 수강생의 과목별 시험 회차 및 점수 등록
-//                case 2 -> updateRoundScoreBySubject(); // 수강생의 과목별 회차 점수 수정
+                case 2 -> updateRoundScoreBySubject(); // 수강생의 과목별 회차 점수 수정
 //                case 3 -> inquireRoundGradeBySubject(); // 수강생의 특정 과목 회차별 등급 조회
                 case 4 -> flag = false; // 메인 화면 이동
                 default -> {
@@ -105,6 +105,19 @@ public class Main {
         System.out.println("수강생의 과목별 시험 회차 및 점수 등록");
         System.out.println("1. 회차 등록");
         System.out.println("2. 점수 등록");
+        System.out.println("3. 메인 화면 이동");
+        System.out.print("관리 항목을 선택하세요...");
+        int input = sc.nextInt();
+        switch (input){
+            case 1 -> round.RoundInput();
+            case 2 -> soc.Score_A();
+        }
+    }
+    public static void updateRoundScoreBySubject(){
+        System.out.println("==================================");
+        System.out.println("수강생의 과목별 시험 회차 및 점수 등록");
+        System.out.println("1. 회차 및 과목 선택");
+        System.out.println("2. 점수 수정");
         System.out.println("3. 메인 화면 이동");
         System.out.print("관리 항목을 선택하세요...");
         int input = sc.nextInt();

@@ -11,11 +11,11 @@ public class Student {
 
     private int studentId; // 수강생 고유 번호
     private String studentName; // 수강생 이름
-    private String subjectList; // 과목 목록
+    private ArrayList<ArrayList<String>> subjectList; // 과목 목록
 
     //생성자
 
-    public void Student(int Id, String Name, String List) {
+    public void Student(int Id, String Name, ArrayList<ArrayList<String>> List) {
         this.studentId = Id;
         this.studentName = Name;
         this.subjectList = List;
@@ -34,6 +34,6 @@ public class Student {
         return studentName;
     }
 
-    public String getSubjectList() {return subjectList;}
+    public ArrayList<ArrayList<String>> getSubjectList() {return subjectList;}
 
 }
