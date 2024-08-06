@@ -9,8 +9,9 @@ public class Score_Data {
     public void score(String a, int b) {
         List<Map<String, Integer>> Score_list = new ArrayList();
         Map<String, Integer> map = new HashMap<String, Integer>();
-        map.put(a,b);
+        map.put(a, b);
         Score_list.add(map);
         System.out.println(Score_list);
     }
+}
 
