@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 public class Subject {
     private int Sub_id;
     private String Sub_name;
@@ -8,6 +10,8 @@ public class Subject {
         this.Sub_name = name;
         this.Sub_type = type;
     }
+
+
     //getter
     public int getSub_id(){return Sub_id;}
     public String getSub_name() {return Sub_name;}

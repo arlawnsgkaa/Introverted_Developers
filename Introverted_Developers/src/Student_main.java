@@ -6,8 +6,11 @@ public class Student_main {
     Subject_Act subjectAct = new Subject_Act();
     Scanner sc = new Scanner(System.in);
     Student stud = new Student();
+
     ArrayList<Integer> Student_Id = new ArrayList<Integer>();
-    ArrayList<String> Student_Name = new ArrayList<String>();
+    ArrayList<String> Student_Name = new ArrayList<>();
+    ArrayList<ArrayList<String>> Subject_Name = new ArrayList<>();
+
     private static int id = 1;
     public void Std() {
         // Student 객체 생성
@@ -27,10 +30,10 @@ public class Student_main {
             }
 
             subjectAct.Subject_Act(sub);
-            String subject = sub.getSub_name();
-            System.out.println(subject);
-            System.out.println(Student_Id);
-            stud.Student(Student_Id.get(id - 2), Student_Name.get(id - 2), subject);
+            Subject_Name.add(subjectAct.Subject_Name_M);
+            Subject_Name.add(subjectAct.Subject_Name_C);
+            stud.Student(Student_Id.get(id - 2), Student_Name.get(id - 2), Subject_Name);
+
 
             System.out.println("End 입력시 등록종료!");
             String a = sc.next();
@@ -46,19 +49,23 @@ public class Student_main {
     }
 
     public void selectST() {
+
+
         ArrayList<String> subjectList = new ArrayList<String>();
+
         System.out.print("수강생 이름을 입력하세요: ");
         String st = sc.next();
         if(Student_Name.contains(st)){
             int STid = stud.getStudentId();
             String STname = stud.getStudentName();
 
-            subjectList.add(sub.getSub_name());
+            ArrayList<ArrayList<String>> SBname = stud.getSubjectList();
+            System.out.println("학번 : "+STid);
+            System.out.println("이름 : "+STname);
+            System.out.println("수강 과목(필수)  : "+SBname.get(0));
+            System.out.println("수강 과목(선택)  : "+SBname.get(1));
 
-            for (String arr : subjectList) {
-                System.out.println(arr);
-            }
-            System.out.println(STid + STname + subjectList);
+
         }
     }
 }
