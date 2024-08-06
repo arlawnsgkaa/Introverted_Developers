@@ -7,12 +7,16 @@ import java.util.Scanner;
 public class Subject_Act {
 
     public int i;
+
     ArrayList<String> Subject_Name_M = new ArrayList<String>();
     ArrayList<String> Subject_Name_C = new ArrayList<String>();
     ArrayList<Integer> Subject_ID = new ArrayList<Integer>();
+
     final String[] Sub_must = {"1. Java", "2. 객체 지향", "3. Spring", "4. JPA", "5. MySQL"};
     final String[] Sub_choice = {"1. 디자인 패턴", "2. Spring Security", "3. Redis", "4. MongoDB","5. 선택안함"};
+
     public void Subject_Act(Subject sub) {
+
         Scanner sc = new Scanner(System.in);
         int num = 0;
         for (int i = 101; i <= 105; i++) {
@@ -53,10 +57,8 @@ public class Subject_Act {
                 sub.Subject(Subject_ID.get(k), Subject_Name_M.get(k), Subject_Type);
             }
 
-            // if 문
-            System.out.println("선택 과목");
-            String Subject_Type_S = "선택";
 
+            System.out.println("선택 과목");
             System.out.println("선택을 안하려면 5번을 선택해주세요");
             for (i = 0; i < 2; i++) {
                 System.out.println(Arrays.toString(Sub_choice));
