@@ -16,7 +16,7 @@ public class Main {
     static Score soc = new Score();
     static Data data = new Data();
 
-
+//예외 처리
     public static void main(String[] args) {
         displayMainView();
         /*try {
@@ -43,12 +43,11 @@ public class Main {
             int input = sc.nextInt();
 
             switch (input) {
-                case 1 -> displayStudentView(); // 수강생 관리
+                case 1 -> displayStudentView(); // 학생 관리
                 case 2 -> displayScoreView(); // 점수 관리
                 case 3 -> flag = false; // 프로그램 종료
                 default -> {
                     System.out.println("잘못된 입력입니다.\n되돌아갑니다!");
-                    // Thread.sleep(2000);
                 }
             }
         }

@@ -11,8 +11,10 @@ public class Student {
     private ArrayList<ArrayList<String>> subjectList; // 과목 목록
 
     //생성자
+    public Student(){
 
-    public void Student(int Id, String Name, ArrayList<ArrayList<String>> List) {
+    }
+    public Student(int Id, String Name, ArrayList<ArrayList<String>> List) {
         this.studentId = Id;
         this.studentName = Name;
         this.subjectList = List;
