@@ -1,8 +1,6 @@
 package Score;
 
 import java.util.ArrayList;
-import java.util.List;
-import java.util.Objects;
 import java.util.Scanner;
 
 public class Student_main {
@@ -14,9 +12,11 @@ public class Student_main {
 
     private static int id = 1;
     final ArrayList<Student> stuList = new ArrayList<>();
+
     public  ArrayList<Student> getStuList(){
         return stuList ;
     }
+
 
     public void Std() {
 
@@ -25,9 +25,8 @@ public class Student_main {
             String name = sc.next();
 
             Student_Name.add(name);
-            System.out.println("조회 하기전" + Student_Name);
 
-            Student st = new Student(id++, name, new ArrayList<>() );
+            Student st = new Student(id++, name, new ArrayList<>());
             subjectAct.Subject_Act(st);
             stuList.add(st);
 
@@ -38,14 +37,12 @@ public class Student_main {
                 break;
             }
         }
-
-//        std.getStudentId();
-//        std.getSubjectList();
-
-
     }
 
     public void selectST() {
+
+        System.out.println("수강생 이름 작성: ");
+
         String st = sc.next();
         for (Student a: stuList) {
             if(a.getStudentName().equals(st)){
