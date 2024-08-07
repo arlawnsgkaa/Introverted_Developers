@@ -9,7 +9,6 @@ import java.util.Scanner;
 
 public class Main {
     static Scanner sc = new Scanner(System.in);
-    static Student student = new Student();
     static Student_main student_main = new Student_main();
     static Round round = new Round();
     static Subject_Act subjectAct = new Subject_Act();
@@ -22,7 +21,7 @@ public class Main {
         try {
             displayMainView();
         } catch (Exception e) {
-            System.out.println("\n오류 발생!\n프로그램을 종료합니다.");
+            System.out.println(e + "\n오류 발생!\n프로그램을 종료합니다.");
         }
     }
 
@@ -115,7 +114,7 @@ public class Main {
             System.out.print("관리 항목을 선택하세요...");
             int input = sc.nextInt();
             switch (input) {
-                case 1 -> Round.RoundInput(data, student);
+                case 1 -> Round.RoundInput(data, student_main);
                 case 2 -> flag = false;
             }
         }
@@ -132,8 +131,9 @@ public class Main {
             System.out.print("관리 항목을 선택하세요...");
             int input = sc.nextInt();
             switch (input) {
-                case 1 -> round.RoundInput(data, student);
+                case 1 -> round.RoundInput(data, student_main);
                 case 2 -> soc.Score_A();
+                case 3 -> flag = false;
             }
         }
     }

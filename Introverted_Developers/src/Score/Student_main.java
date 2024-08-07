@@ -11,7 +11,7 @@ public class Student_main {
     ArrayList<String> Student_Name = new ArrayList<>();
 
     private static int id = 1;
-    private final ArrayList<Student> stuList = new ArrayList<>();
+    final ArrayList<Student> stuList = new ArrayList<>();
 
     public void Std() {
 
@@ -20,9 +20,8 @@ public class Student_main {
             String name = sc.next();
 
             Student_Name.add(name);
-            System.out.println("조회 하기전" + Student_Name);
 
-            Student st = new Student(id++, name, new ArrayList<>() );
+            Student st = new Student(id++, name, new ArrayList<>());
             subjectAct.Subject_Act(st);
             stuList.add(st);
 
@@ -35,6 +34,7 @@ public class Student_main {
     }
 
     public void selectST() {
+        System.out.println("수강생 이름 작성: ");
         String st = sc.next();
         for (Student a: stuList) {
             if(a.getStudentName().equals(st)){
