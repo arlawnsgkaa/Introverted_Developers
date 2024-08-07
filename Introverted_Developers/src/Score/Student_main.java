@@ -1,8 +1,6 @@
 package Score;
 
 import java.util.ArrayList;
-import java.util.List;
-import java.util.Objects;
 import java.util.Scanner;
 
 public class Student_main {
@@ -12,16 +10,8 @@ public class Student_main {
 
     ArrayList<String> Student_Name = new ArrayList<>();
 
-
     private static int id = 1;
-
-
-
     private final ArrayList<Student> stuList = new ArrayList<>();
-
-
-
-
 
     public void Std() {
 
@@ -42,11 +32,6 @@ public class Student_main {
                 break;
             }
         }
-
-//        std.getStudentId();
-//        std.getSubjectList();
-
-
     }
 
     public void selectST() {
