@@ -16,8 +16,8 @@ public class Rank {
     Scanner sc = new Scanner(System.in);
 
 
-    public void Rank_must(Data data, Student_main std){
-        boolean flag= true;
+    public void Rank_must(Data data, Student_main std) {
+        boolean flag = true;
         String s_S;
         while (flag) {
 
@@ -26,19 +26,19 @@ public class Rank {
             String name = sc.next();
             for (Student a : std.stuList) {
                 if (a.getStudentName().equals(name)) {
-                    System.out.println(a.getStudentId()+". 학번 " + "수강생: " + a.getStudentName());
+                    System.out.println(a.getStudentId() + ". 학번 " + "수강생: " + a.getStudentName());
                     System.out.println("필수 과목: " + a.getSubjectList().getFirst());
                     System.out.println("선택 과목: " + a.getSubjectList().get(1));
                     for (String key : data.map.keySet()) {
-                        getrsRank( key,data.map.get(key));
+                        //getrsRank(key, data.map.get(key));
                     }
                     flag = false;
                 }
             }
         }
     }
-
-    public static void getrsRank( String s, ArrayList<Sub_name_score> score) {
+}
+   /* public static void getrsRank( String s, ArrayList<Sub_name_score> score) {
             if (s.equals("1회차")) {
                 if (score.get(1).getScore() >= 95) {
                     System.out.println(score.get(0).getName() + " : A");
@@ -49,11 +49,11 @@ public class Rank {
                 } else if (score >= 70) {
                     System.out.println(score + " : D");
                 } else if (score >= 60) {
-                    System.out.println(score + " : F");
+                    System.out.println(score + " : F");2
                 } else {
                     System.out.println("N");
                 }
             }
 
-    }
+    }*/
 
