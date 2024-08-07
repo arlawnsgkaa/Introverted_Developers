@@ -14,6 +14,7 @@ public class Student {
     public Student(){
 
     }
+
     public Student(int Id, String Name, ArrayList<ArrayList<String>> List) {
         this.studentId = Id;
         this.studentName = Name;

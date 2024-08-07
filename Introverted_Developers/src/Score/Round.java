@@ -11,6 +11,7 @@ public class Round {
 
         for(Student a : std.stuList) {
             ArrayList<ArrayList<String>> S_list = a.getSubjectList();
+            System.out.println(S_list);
 
             while (true) {
                 if (data.map.size() < 10) {
@@ -19,7 +20,9 @@ public class Round {
                     System.out.println("과목 선택");
                     System.out.println("필수 과목 : " + S_list.get(0));
                     System.out.println("선택 과목 : " + S_list.get(1));
+
                     String s_2 = sc.next();
+
                     if (s_2.equals(S_list.get(0).get(0))) {
                         System.out.println("점수를 입력해주세요");
                         int i = sc.nextInt();
@@ -59,7 +62,6 @@ public class Round {
                     break;
                 }
             }
-
         }
 
     /*    for (int i = 1; i <= 10; i++) {
