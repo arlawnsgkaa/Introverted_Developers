@@ -22,17 +22,14 @@ public class Student_main {
 
 
     public void Std() {
-
         while (true) {
             System.out.println("수강생 이름 작성: ");
             String name = sc.next();
-
             Student_Name.add(name);
 
             Student st = new Student(id++, name, new ArrayList<>());
             subjectAct.Subject_Act(st);
             stuList.add(st);
-
 
             System.out.println("End 입력시 등록종료!");
             String a = sc.next();
@@ -43,7 +40,6 @@ public class Student_main {
     }
 
     public void selectST() {
-
         System.out.println("수강생 이름 작성: ");
 
         String st = sc.next();
@@ -62,6 +58,15 @@ public class Student_main {
         }
 
     }
+    public Student getStudentByName(String name){
+        for(Student n : stuList){
+            if(name.equals(n.getStudentName())){
+                return n;
+            }
+        }
+        return null;
+    }
+
 
 }
 

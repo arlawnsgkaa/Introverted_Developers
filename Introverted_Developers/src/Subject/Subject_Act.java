@@ -8,7 +8,15 @@ public class Subject_Act {
     ArrayList<Integer> Subject_ID = new ArrayList<>();
     final String[] Sub_must = {"Java", "객체 지향", "Spring", "JPA", "MySQL"};
     final String[] Sub_choice = {"디자인 패턴", "Spring Security", "Redis", "MongoDB"};
-
+    public Map<String,String> Sub_Map = new HashMap<>();
+    public Subject_Act() {
+        for(String Sub_must_ : Sub_must ){
+            Sub_Map.put(Sub_must_, "M");
+        }
+        for(String Sub_choice_ : Sub_choice ){
+            Sub_Map.put(Sub_choice_, "C");
+        }
+    }
     public void Subject_Act(Student student) {
 
         ArrayList<String> Subject_Name_M = new ArrayList<>();

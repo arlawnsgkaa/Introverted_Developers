@@ -10,7 +10,7 @@ public class Score {
 
         Scanner sc = new Scanner(System.in);
         System.out.println("회차를 선택해주세여");
-        String j = sc.next();
+        String j = sc.nextLine();
         for(String MapKey : data.map.keySet()){
             if(j.equals(MapKey)) {
                 System.out.println(data.map.get(MapKey));

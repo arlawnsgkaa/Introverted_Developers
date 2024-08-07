@@ -149,10 +149,10 @@ public class Main {
             System.out.println("==================================");
             System.out.println("수강생의 특정 과목 회차별 등급 조회");
             System.out.println("1.과목별 등급 조회");
-            System.out.println("2. 메인 화면 이동");
+            System.out.println("2.메인 화면 이동");
             int input = sc.nextInt();
             switch (input) {
-                case 1 -> rank.Rank_must(data, student_main);
+                case 1 -> rank.Rank_must(data, student_main, subjectAct);
                 case 2-> flag = false;
 
             }

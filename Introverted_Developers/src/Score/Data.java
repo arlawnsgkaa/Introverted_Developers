@@ -1,5 +1,7 @@
 package Score;
 
+import Student.Student;
+
 import java.util.*;
 
 public class Data {
@@ -9,10 +11,9 @@ public class Data {
    // ArrayList<ArrayList<String>> D_list = new ArrayList<>();
     ArrayList<Sub_name_score> Q_list = new ArrayList<>();
 
-    public void score(String round, String Sub_name, int Sub_score) {
-        map.put(round, new ArrayList<>());
-        map.get(round).add(new Sub_name_score(Sub_name,Sub_score));
-        map.forEach((k, v) -> System.out.println("과목: " + k + " " + v + "점수"));
-
+    public void score(String name, int round, String Sub_name, int Sub_score) {
+        map.putIfAbsent(name, new ArrayList<>());
+        map.get(name).add(new Sub_name_score(round, Sub_name, Sub_score));
+        map.forEach((k, v) -> System.out.println("학생이름 : " + k + " " + v ));
     }
 }
