@@ -1,4 +1,6 @@
-package Score;
+package Student;
+
+import Subject.Subject_Act;
 
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -11,7 +13,8 @@ public class Student_main {
     ArrayList<String> Student_Name = new ArrayList<>();
 
     private static int id = 1;
-    final ArrayList<Student> stuList = new ArrayList<>();
+
+    public final ArrayList<Student> stuList = new ArrayList<>();
 
     public void Std() {
 

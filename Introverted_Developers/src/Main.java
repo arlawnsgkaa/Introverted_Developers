@@ -2,8 +2,8 @@ import Score.Round;
 import Score.Score;
 import Score.Data;
 import Score.Rank;
-import Score.Subject_Act;
-import Score.Student_main;
+import Subject.Subject_Act;
+import Student.Student_main;
 
 import java.util.Scanner;
 
@@ -132,7 +132,7 @@ public class Main {
             int input = sc.nextInt();
             switch (input) {
                 case 1 -> round.RoundInput(data, student_main);
-                case 2 -> soc.Score_A();
+//                case 2 -> soc.Score_A();
                 case 3 -> flag = false;
             }
         }
@@ -144,10 +144,11 @@ public class Main {
             System.out.println("==================================");
             System.out.println("수강생의 특정 과목 회차별 등급 조회");
             System.out.println("1.과목별 등급 조회");
+            System.out.print("관리 항목을 선택하세요...");
             int input = sc.nextInt();
             switch (input) {
                 case 1 -> rank.Rank_must(data, student_main);
-                case 2 -> soc.Score_A();
+//                case 2 -> soc.Score_A();
                 case 3 -> flag = false;
             }
         }

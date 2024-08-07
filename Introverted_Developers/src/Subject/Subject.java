@@ -1,4 +1,4 @@
-package Score;
+package Subject;
 
 public class Subject {
 
