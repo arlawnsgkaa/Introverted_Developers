@@ -5,6 +5,7 @@ import java.util.Scanner;
 
 public class Score {
 
+
     public void Score_A(Data data) {
 
         Scanner sc = new Scanner(System.in);

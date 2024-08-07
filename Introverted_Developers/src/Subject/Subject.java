@@ -1,4 +1,4 @@
-package Score;
+package Subject;
 
 import java.util.ArrayList;
 

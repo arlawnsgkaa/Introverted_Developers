@@ -2,8 +2,8 @@ import Score.Round;
 import Score.Score;
 import Score.Data;
 import Score.Rank;
-import Score.Subject_Act;
-import Score.Student_main;
+import Subject.Subject_Act;
+import Student.Student_main;
 
 import java.util.Scanner;
 
@@ -139,7 +139,6 @@ public class Main {
                     System.out.println("잘못된 입력입니다.\n메인 화면 이동...");
                     flag = false;
                 }
-
             }
         }
     }

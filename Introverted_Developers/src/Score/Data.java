@@ -4,7 +4,6 @@ import java.util.*;
 
 public class Data {
 
-    Student_main stm = new Student_main();
     Set<String> listMapInsert  = new HashSet<>();
     Map<String, ArrayList<Sub_name_score>> map = new HashMap<>();
    // ArrayList<ArrayList<String>> D_list = new ArrayList<>();
@@ -16,5 +15,4 @@ public class Data {
         map.forEach((k, v) -> System.out.println("과목: " + k + " " + v + "점수"));
 
     }
-
 }

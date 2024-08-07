@@ -1,6 +1,8 @@
 package Score;
 
 
+import Student.Student;
+import Student.Student_main;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -62,6 +64,5 @@ public class Round {
         }
 
     }
-
 }
 
