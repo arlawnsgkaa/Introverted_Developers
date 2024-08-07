@@ -11,8 +11,8 @@ public class Subject_Act {
 
     public void Subject_Act(Student student) {
 
-        Set<String> Subject_Name_M = new HashSet<>();
-        Set<String> Subject_Name_C = new HashSet<>();
+        ArrayList<String> Subject_Name_M = new ArrayList<>();
+        ArrayList<String> Subject_Name_C = new ArrayList<>();
 
         Scanner sc = new Scanner(System.in);
         int num = 0;
@@ -31,6 +31,7 @@ public class Subject_Act {
                 }
                 num = sc.nextInt();
                 if (num <= Sub_must.length && num >= 1) {
+
                     if (Subject_Name_M.contains(Sub_must[num - 1])) {
                         System.out.println("이미 있는 과목입니다.");
                     } else {
@@ -49,12 +50,15 @@ public class Subject_Act {
                 while (Subject_Name_C.size() < 2 && flag) {
 
                     for(int i= 0; i< Sub_choice.length; i++){
+
                         System.out.println(i+1+". "+Sub_choice[i]);
                     }
                     num = sc.nextInt();
 
                     if (num <= Sub_choice.length && num >= 1){
+
                         if(Subject_Name_C.contains(Sub_choice[num-1])){
+
                             System.out.println("이미 있는 과목입니다.");
                         }else{
                             Subject_Name_C.add(Sub_choice[num-1]);
@@ -66,10 +70,9 @@ public class Subject_Act {
                     }
 
                 }
-                ArrayList<String> Subject_Name_M_list = new ArrayList<>(Subject_Name_M);
-                ArrayList<String> Subject_Name_C_list = new ArrayList<>(Subject_Name_C);
-                student.getSubjectList().add(Subject_Name_M_list);
-                student.getSubjectList().add(Subject_Name_C_list);
+
+                student.getSubjectList().add(Subject_Name_M);
+                student.getSubjectList().add(Subject_Name_C);
 
                 System.out.println("과목 선택이 완료 되었습니다");
                 p = false;
