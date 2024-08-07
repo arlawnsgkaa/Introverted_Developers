@@ -12,20 +12,13 @@ public class Student_main {
 
     ArrayList<String> Student_Name = new ArrayList<>();
 
-
     private static int id = 1;
-
-
-
-    private final ArrayList<Student> stuList = new ArrayList<>();
-
-
-
+    final ArrayList<Student> stuList = new ArrayList<>();
     public  ArrayList<Student> getStuList(){
-        return  stuList;
+        return stuList ;
     }
 
-    public void Std(Student stud) {
+    public void Std() {
 
         while (true) {
             System.out.println("수강생 이름 작성: ");
@@ -37,6 +30,7 @@ public class Student_main {
             Student st = new Student(id++, name, new ArrayList<>() );
             subjectAct.Subject_Act(st);
             stuList.add(st);
+
 
             System.out.println("End 입력시 등록종료!");
             String a = sc.next();
@@ -51,7 +45,7 @@ public class Student_main {
 
     }
 
-    public void selectST(Student stud) {
+    public void selectST() {
         String st = sc.next();
         for (Student a: stuList) {
             if(a.getStudentName().equals(st)){
