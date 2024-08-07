@@ -15,7 +15,7 @@ public class Score {
                 System.out.println(data.map.get(MapKey));
                 System.out.println("수정할 점수 기입");
                 int i = sc.nextInt();
-                data.map.put(MapKey,i);
+               // data.map.put(MapKey,i);
             }
 
         }
