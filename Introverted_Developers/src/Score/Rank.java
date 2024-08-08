@@ -14,7 +14,6 @@ public class Rank {
 
     public void Rank_must(Data data, Student_main std, Subject_Act sub) {
         boolean flag = true;
-        String s_S;
         while (flag) {
             System.out.println("학생 이름을 입력해주세요");
             String name = sc.nextLine();

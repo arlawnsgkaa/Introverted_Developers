@@ -133,7 +133,7 @@ public class Main {
             System.out.print("관리 항목을 선택하세요...");
             int input = sc.nextInt();
             switch (input) {
-                case 1 -> soc.Score_A(data);
+                case 1 -> soc.Score(data, student_main);
                 case 2 -> flag = false;
                 default -> {
                     System.out.println("잘못된 입력입니다.\n메인 화면 이동...");

@@ -6,20 +6,13 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Student_main {
-
     Subject_Act subjectAct = new Subject_Act();
     Scanner sc = new Scanner(System.in);
 
     ArrayList<String> Student_Name = new ArrayList<>();
 
     private static int id = 1;
-
     public final ArrayList<Student> stuList = new ArrayList<>();
-
-    public  ArrayList<Student> getStuList(){
-        return stuList ;
-    }
-
 
     public void Std() {
         while (true) {
@@ -44,8 +37,8 @@ public class Student_main {
 
         String st = sc.next();
         for (Student a: stuList) {
-            if(a.getStudentName().equals(st)){
 
+            if(a.getStudentName().equals(st)){
                 int STid = a.getStudentId();
                 String STname = a.getStudentName();
 
@@ -66,8 +59,6 @@ public class Student_main {
         }
         return null;
     }
-
-
 }
 
 

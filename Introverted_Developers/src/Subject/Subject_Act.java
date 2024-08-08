@@ -9,6 +9,7 @@ public class Subject_Act {
     final String[] Sub_must = {"Java", "객체 지향", "Spring", "JPA", "MySQL"};
     final String[] Sub_choice = {"디자인 패턴", "Spring Security", "Redis", "MongoDB"};
     public Map<String,String> Sub_Map = new HashMap<>();
+
     public Subject_Act() {
         for(String Sub_must_ : Sub_must ){
             Sub_Map.put(Sub_must_, "M");
@@ -17,6 +18,7 @@ public class Subject_Act {
             Sub_Map.put(Sub_choice_, "C");
         }
     }
+
     public void Subject_Act(Student student) {
 
         ArrayList<String> Subject_Name_M = new ArrayList<>();

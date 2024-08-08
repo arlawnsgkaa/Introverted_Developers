@@ -1,29 +1,38 @@
 package Score;
 
+import Student.Student_main;
+import Student.Student;
+import java.util.ArrayList;
 import java.util.Scanner;
 
 
 public class Score {
 
 
-    public void Score_A(Data data) {
+    public void Score(Data data, Student_main std) {
 
         Scanner sc = new Scanner(System.in);
-        System.out.println("회차를 선택해주세여");
-        String j = sc.nextLine();
+        System.out.println("학생 이름을 입력해주세요");
+        String name = sc.nextLine();
         for(String MapKey : data.map.keySet()){
-            if(j.equals(MapKey)) {
-                System.out.println(data.map.get(MapKey));
-                System.out.println("수정할 점수 기입");
-                int i = sc.nextInt();
-               // data.map.put(MapKey,i);
-            }
+            if(name.equals(MapKey)) {
+                Student a = std.getStudentByName(name);
+                if(a == null) {return;}
+                ArrayList<Sub_name_score> Sub = data.map.get(a.getStudentName());
+                System.out.println("필수 과목 : " + a.getSubjectList().get(0));
+                System.out.println("선택 과목 : " + a.getSubjectList().get(1));
 
+                System.out.println("과목이름을 입력해주세요");
+                String Sub_Name = sc.nextLine();
+                for(Sub_name_score Sub_ : Sub) {
+                    if(Sub_.getName().equals(Sub_Name)){
+                        System.out.println("변경 점수를 입력해주세요");
+                        int i = sc.nextInt();
+                        Sub_.setScore(i);
+                    }
+                }
+            }
         }
         System.out.println(data.map);
-
     }
-
 }
-
-
