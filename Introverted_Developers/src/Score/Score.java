@@ -1,27 +1,53 @@
 package Score;
 
+import Student.Student_main;
+import Student.Student;
+import Subject.Subject_Act;
+
+import java.util.ArrayList;
 import java.util.Scanner;
 
 
 public class Score {
 
 
-    public void Score_A(Data data) {
+    public void Score(Data data, Student_main std, Subject_Act sub) {
 
         Scanner sc = new Scanner(System.in);
-        System.out.println("회차를 선택해주세여");
-        String j = sc.nextLine();
+        System.out.println("학생 이름을 입력해주세요");
+        String name = sc.nextLine();
         for(String MapKey : data.map.keySet()){
-            if(j.equals(MapKey)) {
-                System.out.println(data.map.get(MapKey));
-                System.out.println("수정할 점수 기입");
-                int i = sc.nextInt();
-               // data.map.put(MapKey,i);
+            if(name.equals(MapKey)) {
+                Student a = std.getStudentByName(name);
+                if(a == null) {return;}
+                ArrayList<Sub_name_score> Sub = data.map.get(a.getStudentName());
+
+                System.out.println("과목이름을 입력해주세요");
+                String Sub_Name = sc.nextLine();
+                for(Sub_name_score Sub_ : Sub) {
+                    if(Sub_.getName().equals(Sub_Name)){
+                        int grade = sub.Sub_Map.get(Sub_.getName()).equals("M") ? Score_A(Sub_.getScore()) : Score_B(Sub_.getScore());
+
+                    }
+                }
+
             }
 
         }
         System.out.println(data.map);
 
+    }
+    public int Score_A(int Sc_A) {
+        Scanner sc = new Scanner(System.in);
+        int a = sc.nextInt();
+        Sc_A = a;
+        return Sc_A;
+    }
+    public int Score_B(int Sc_B) {
+        Scanner sc = new Scanner(System.in);
+        int a = sc.nextInt();
+        Sc_B = a;
+        return Sc_B;
     }
 
 }
